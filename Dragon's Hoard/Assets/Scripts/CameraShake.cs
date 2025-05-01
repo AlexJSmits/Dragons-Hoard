@@ -7,7 +7,7 @@ public class CameraShake : MonoBehaviour
 
     public float magnitude = 0;
     public float intensityDivision = 10;
-    public float magnitudeEasingTime = 1;
+    public float magnitudeEasingTime = 7;
     private Vector3 _originalPosition;
     
     [HideInInspector]
@@ -26,10 +26,10 @@ public class CameraShake : MonoBehaviour
             transform.localPosition = _originalPosition;
         }
 
-        if (gamePaused)
+        if (gamePaused == false)
         {
-            float x = Random.Range(-1, 1) * (magnitude/intensityDivision);
-            float y = Random.Range(-1, 1) * (magnitude/intensityDivision);
+            float x = Random.Range(-0.4f, 0.4f) * (magnitude/intensityDivision);
+            float y = Random.Range(-0.4f, 0.4f) * (magnitude/intensityDivision);
 
             transform.localPosition = _originalPosition + new Vector3(x, y, 0);
         }

@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnitude: 0
   intensityDivision: 50
-  magnitudeEasingTime: 3
+  magnitudeEasingTime: 8
   gamePaused: 0
 --- !u!1001 &522186648
 PrefabInstance:

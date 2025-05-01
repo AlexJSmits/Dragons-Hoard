@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnitude: 0
   intensityDivision: 50
-  magnitudeEasingTime: 3
+  magnitudeEasingTime: 8
   gamePaused: 0
 --- !u!1 &525554182
 GameObject:
