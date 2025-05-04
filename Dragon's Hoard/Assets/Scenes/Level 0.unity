@@ -1174,6 +1174,7 @@ Transform:
   - {fileID: 508522330}
   - {fileID: 1484465290}
   - {fileID: 1430438005}
+  - {fileID: 1007637722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &282630880
@@ -1964,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1119b6799c0fa4a9998cdf68b9b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level 1
+  nextScene: Level 0
   mainMenu: Level Select
   _sceneSwapDelay: 1
 --- !u!1 &493301516
@@ -4730,12 +4731,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007637720}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: 1.02, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.2667265, y: 1.926266, z: -0.016167747}
   m_LocalScale: {x: 0.6638033, y: 0.6042972, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 272716477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021097078
 GameObject:
@@ -10706,7 +10707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1119b6799c0fa4a9998cdf68b9b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level 1
+  nextScene: Level 0
   mainMenu: Level Select
   _sceneSwapDelay: 1
 --- !u!114 &1885525032
@@ -15821,6 +15822,10 @@ PrefabInstance:
       value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 2760494877796481016, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
+      propertyPath: winCanvas
+      value: 
+      objectReference: {fileID: 1885525034}
+    - target: {fileID: 2760494877796481016, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
       propertyPath: currentlevel
       value: 
       objectReference: {fileID: 272716476}
@@ -15859,4 +15864,3 @@ SceneRoots:
   - {fileID: 362402183}
   - {fileID: 1781408390}
   - {fileID: 1024458767}
-  - {fileID: 1007637722}

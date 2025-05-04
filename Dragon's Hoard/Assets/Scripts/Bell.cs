@@ -36,8 +36,11 @@ public class Bell : MonoBehaviour
 
         if (collision.relativeVelocity.magnitude > 1f && _audioSource.isPlaying == false)
         {
+            if (_noiseMeter != null)
+            {
+                _noiseMeter.currentNoise += _bellVolume;
+            }
             //probably will need to check if it hits a rope and ignore that
-            _noiseMeter.currentNoise += _bellVolume;
             _audioSource.pitch = Random.Range(0.8f, 1.2f);
             _audioSource.Play();
         }

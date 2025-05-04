@@ -10,12 +10,13 @@ public class WinBox : MonoBehaviour
     private TextMeshPro _text;
     private float _winCountdown = 3;
     private bool _isCounting;
-    public Canvas winCanvas;
-    public GameObject currentlevel;
-    public GameObject nextLevel;
+    //public Canvas winCanvas;
+    //public GameObject currentlevel;
+    //public GameObject nextLevel;
     public GameObject levelSelectGate;
     private NoiseMeter _noiseMeter;
     private AudioSource _audio;
+    private Animator _animationManager;
 
     void Start()
     {
@@ -32,6 +33,15 @@ public class WinBox : MonoBehaviour
         }
 
         _audio = GetComponent<AudioSource>();
+
+        if (GameObject.FindGameObjectWithTag("AnimationManager"))
+        {
+            _animationManager = GameObject.FindGameObjectWithTag("AnimationManager").GetComponent<Animator>();
+        }
+        else
+        {
+            Debug.Log("Could not find a game object with tag 'AnimationManager");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -91,9 +101,19 @@ public class WinBox : MonoBehaviour
         {
             _noiseMeter.Win();
         }
-        else
+        else if (levelSelectGate != null)
         {
             GetComponent<SceneChange>().LoadScene();
+        }
+        else
+        {
+            Camera.main.GetComponent<CameraShake>().gamePaused = true;
+            Time.timeScale = 0;
+
+            if (_animationManager!)
+            {
+                _animationManager.SetBool("Win", true);
+            }
         }
     }
 }
