@@ -19,11 +19,24 @@ public class WaterSprout : MonoBehaviour
             _audioSource = GetComponent<AudioSource>();
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D _collision)
     {
-        _gameObjects.Add(collision.gameObject);
-        _audioSource.pitch = Random.Range(-0.8f, 1.8f);
-        _audioSource.Play();
+        _gameObjects.Add(_collision.gameObject);
+
+        if (_collision.gameObject.GetComponent<Rigidbody2D>())
+        {
+            float noise = _collision.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude;
+            
+            if (noise > 1) 
+            {
+                if (_audioSource.isPlaying == false)
+                {
+                    _audioSource.pitch = Random.Range(0.8f, 1.2f);
+                    _audioSource.Play();
+                }
+            }
+        }        
+        
     }
 
     void FixedUpdate()

@@ -1,7 +1,7 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Drag2DObject : MonoBehaviour
 {
@@ -116,8 +116,10 @@ public class Drag2DObject : MonoBehaviour
 
         if (_noiseMeter != null && _collision.relativeVelocity.magnitude > 1f)
         {
-            if (_noiseMeter.currentNoise == 0)
+            //if (_noiseMeter.currentNoise == 0)
+            if (_dragonWakeUpNoise.isPlaying == false)
             {
+                _dragonWakeUpNoise.pitch = Random.Range(0.7f, 1.3f);
                 _dragonWakeUpNoise.Play();
             }
 
