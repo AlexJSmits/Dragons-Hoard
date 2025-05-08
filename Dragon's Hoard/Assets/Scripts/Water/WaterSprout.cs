@@ -9,6 +9,7 @@ public class WaterSprout : MonoBehaviour
     public Vector2 direction;
     public List<GameObject> _gameObjects;
     private AudioSource _audioSource;
+    private NoiseMeter _noiseMeter;
 
     void Start()
     {
@@ -17,6 +18,11 @@ public class WaterSprout : MonoBehaviour
         if (GetComponent<AudioSource>())
         {
             _audioSource = GetComponent<AudioSource>();
+        }
+
+        if (GameObject.FindGameObjectWithTag("NoiseMeter"))
+        {
+            _noiseMeter = GameObject.FindGameObjectWithTag("NoiseMeter").GetComponent<NoiseMeter>();
         }
     }
     void OnTriggerEnter2D(Collider2D _collision)
@@ -33,6 +39,12 @@ public class WaterSprout : MonoBehaviour
                 {
                     _audioSource.pitch = Random.Range(0.8f, 1.2f);
                     _audioSource.Play();
+
+                    if (_noiseMeter != null)
+                    {
+                        _noiseMeter.currentNoise += 2;
+                        _noiseMeter.PlayDragonWakeUpNoise();
+                    }
                 }
             }
         }        

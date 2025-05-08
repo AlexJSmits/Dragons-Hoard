@@ -10,7 +10,9 @@ public class NoiseMeter : MonoBehaviour
     private bool _pause = false;
     public float currentNoise = 0;
     private Animator _animationManager;
-
+    private AudioSource _dragonWakeUpNoise;
+    private Animator _snoreAnimator;
+    
     [HideInInspector]
     public bool decreasing = true;
 
@@ -32,6 +34,16 @@ public class NoiseMeter : MonoBehaviour
         {
             Debug.Log("Could not find a game object with tag 'AnimationManager");
         }
+
+        if (GameObject.FindGameObjectWithTag("DragonWakeUpNoise"))
+        {
+            _dragonWakeUpNoise = GameObject.FindGameObjectWithTag("DragonWakeUpNoise").GetComponent<AudioSource>();
+            _snoreAnimator = GameObject.FindGameObjectWithTag("DragonWakeUpNoise").GetComponent<Animator>();
+        }
+        else
+        {
+            Debug.Log("Could not find a game object in scene with the tag 'DragonWakeUpNoise'");
+        }
     }
 
     void FixedUpdate()
@@ -40,6 +52,15 @@ public class NoiseMeter : MonoBehaviour
         if (currentNoise > 0 && _pause == false && decreasing)
         {
             currentNoise -= reductionFloat;
+        }
+
+        if (currentNoise == 0)
+        {
+            _snoreAnimator.speed = 1;
+        }
+        else
+        {
+            _snoreAnimator.speed = 0;
         }
     }
 
@@ -114,5 +135,18 @@ public class NoiseMeter : MonoBehaviour
         {
             _animationManager.SetBool("Win", true);
         }
+    }
+
+    public void PlayDragonWakeUpNoise()
+    {
+
+
+        if (_dragonWakeUpNoise.isPlaying == false)
+            {
+                _dragonWakeUpNoise.pitch = Random.Range(0.6f, 1.4f);
+                _dragonWakeUpNoise.Play();
+                decreasing = false;
+                Invoke("ResumeNoiseDecrease", 2);
+            }
     }
 }

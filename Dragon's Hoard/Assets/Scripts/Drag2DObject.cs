@@ -15,8 +15,6 @@ public class Drag2DObject : MonoBehaviour
     public AudioClip[] audioClips;
     private NoiseMeter _noiseMeter;
     private CameraShake _cameraShakeScript;
-    private AudioSource _dragonWakeUpNoise;
-    private Animator _snoreAnimator;
 
     void Start()
     {
@@ -32,16 +30,6 @@ public class Drag2DObject : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("NoiseMeter"))
         {
             _noiseMeter = GameObject.FindGameObjectWithTag("NoiseMeter").GetComponent<NoiseMeter>();
-        }
-
-        if (GameObject.FindGameObjectWithTag("DragonWakeUpNoise"))
-        {
-            _dragonWakeUpNoise = GameObject.FindGameObjectWithTag("DragonWakeUpNoise").GetComponent<AudioSource>();
-            _snoreAnimator = GameObject.FindGameObjectWithTag("DragonWakeUpNoise").GetComponent<Animator>();
-        }
-        else
-        {
-            Debug.Log("Could not find a game object in scene with the tag 'DragonWakeUpNoise'");
         }
 
         _cameraShakeScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
@@ -87,18 +75,6 @@ public class Drag2DObject : MonoBehaviour
             {
                 _rigidBody.AddTorque(10 * Time.deltaTime);
             }
-
-        if (_noiseMeter != null)
-        {
-            if (_noiseMeter.currentNoise == 0)
-            {
-                _snoreAnimator.speed = 1;
-            }
-            else
-            {
-                _snoreAnimator.speed = 0;
-            }
-        }
             
     }
 
@@ -116,16 +92,8 @@ public class Drag2DObject : MonoBehaviour
 
         if (_noiseMeter != null && _collision.relativeVelocity.magnitude > 1f)
         {
-            //if (_noiseMeter.currentNoise == 0)
-            if (_dragonWakeUpNoise.isPlaying == false)
-            {
-                _dragonWakeUpNoise.pitch = Random.Range(0.7f, 1.3f);
-                _dragonWakeUpNoise.Play();
-            }
-
+            _noiseMeter.PlayDragonWakeUpNoise();
             _noiseMeter.currentNoise += noise;
-            _noiseMeter.decreasing = false;
-            _noiseMeter.Invoke("ResumeNoiseDecrease", 2);
         }
 
         if (_cameraShakeScript != null && _collision.relativeVelocity.magnitude > 2f)
