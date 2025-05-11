@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class WinBox : MonoBehaviour
 {
+    [Header("Level Progress Tracking")]
+    public ProgressSaver playerProgressScriptableObject;
+    public int levelNumber;
+
+    public GameObject levelSelectGate;
     private int _totalNumberOfValuables;
     private int _numberOfValuables = 0;
     private TextMeshPro _text;
     private float _winCountdown = 3;
     private bool _isCounting;
-    //public Canvas winCanvas;
-    //public GameObject currentlevel;
-    //public GameObject nextLevel;
-    public GameObject levelSelectGate;
     private NoiseMeter _noiseMeter;
     private AudioSource _audio;
     private Animator _animationManager;
@@ -92,8 +93,16 @@ public class WinBox : MonoBehaviour
 
     void WinCondition()
     {
+
         if (_audio)
-        _audio.Play();
+        {
+            _audio.Play();
+        }
+      
+        if (playerProgressScriptableObject && playerProgressScriptableObject.levelProgress == levelNumber)
+        {
+            playerProgressScriptableObject.levelProgress ++;
+        }
 
         Time.timeScale = 0;
 
@@ -107,6 +116,7 @@ public class WinBox : MonoBehaviour
         }
         else
         {
+            //Only for level 0 because no noise meter or level gate.
             Camera.main.GetComponent<CameraShake>().gamePaused = true;
             Time.timeScale = 0;
 

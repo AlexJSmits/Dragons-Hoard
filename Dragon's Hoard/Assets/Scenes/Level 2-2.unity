@@ -13804,9 +13804,17 @@ PrefabInstance:
       value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 2760494877796481016, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
+      propertyPath: levelNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2760494877796481016, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
       propertyPath: currentlevel
       value: 
       objectReference: {fileID: 272716476}
+    - target: {fileID: 2760494877796481016, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
+      propertyPath: playerProgressScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
     - target: {fileID: 4686914534100224462, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
       propertyPath: m_Name
       value: Loot Chest
