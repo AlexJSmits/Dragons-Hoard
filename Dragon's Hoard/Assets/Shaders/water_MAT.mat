@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - _DistortionAmount: 1
     - _SoftMode: 0
-    - _Speed: 0.75
+    - _Speed: 2
     m_Colors:
     - _ColorBright: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDark: {r: 0, g: 0.39356396, b: 0.8018868, a: 1}
