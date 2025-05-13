@@ -13494,7 +13494,7 @@ MonoBehaviour:
   cameraObject: {fileID: 519420028}
   waterFall: {fileID: 8809562075308375444}
   activeScreen: 1
-  moveSpeed: 2
+  moveSpeed: 15
   screen1transform: {x: 0, y: 0, z: -10}
   screen2transform: {x: 20, y: 0, z: -10}
   screen3transform: {x: 40, y: 0, z: -10}
