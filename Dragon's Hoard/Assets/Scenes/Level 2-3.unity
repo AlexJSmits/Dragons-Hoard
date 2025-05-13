@@ -1944,7 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1119b6799c0fa4a9998cdf68b9b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level 2-1
+  nextScene: Level 2-3
   mainMenu: Level Select
   _sceneSwapDelay: 1
 --- !u!1001 &463019327
@@ -8740,7 +8740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1119b6799c0fa4a9998cdf68b9b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level 2-1
+  nextScene: Level 2-3
   mainMenu: Level Select
   _sceneSwapDelay: 1
 --- !u!114 &1885525032

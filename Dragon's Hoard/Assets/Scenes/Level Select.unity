@@ -2990,7 +2990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &179564223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3551,16 +3551,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 628385451}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 628385453}
+        m_TargetAssemblyTypeName: LevelSelectCamera, Assembly-CSharp
+        m_MethodName: Screen2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1To2
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &204926193
@@ -5898,6 +5898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 257708120}
 --- !u!61 &306775013
 BoxCollider2D:
@@ -11421,7 +11423,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11547,22 +11548,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 628385452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7132b745dbef658439af7443b2a4258c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitude: 0
-  intensityDivision: 50
-  magnitudeEasingTime: 3
-  gamePaused: 0
 --- !u!1 &521936897
 GameObject:
   m_ObjectHideFlags: 0
@@ -12006,6 +11991,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 1480713984}
 --- !u!61 &556354212
 BoxCollider2D:
@@ -12718,10 +12705,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 628385451}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 628385453}
+        m_TargetAssemblyTypeName: LevelSelectCamera, Assembly-CSharp
+        m_MethodName: Screen1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13465,7 +13452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 628385452}
-  - component: {fileID: 628385451}
+  - component: {fileID: 628385453}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -13473,28 +13460,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &628385451
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628385450}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9a966e8572492f04fbfdad24f5239160, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &628385452
 Transform:
   m_ObjectHideFlags: 0
@@ -13513,6 +13478,29 @@ Transform:
   - {fileID: 5200366155311253295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628385453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628385450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bc5ddeebc885445aacc0be59c2a865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  cameraObject: {fileID: 519420028}
+  waterFall: {fileID: 8809562075308375444}
+  activeScreen: 1
+  moveSpeed: 2
+  screen1transform: {x: 0, y: 0, z: -10}
+  screen2transform: {x: 20, y: 0, z: -10}
+  screen3transform: {x: 40, y: 0, z: -10}
+  screen1Arrows: {fileID: 179564222}
+  screen2Arrows: {fileID: 1000188925}
+  screen3Arrows: {fileID: 2126062783}
 --- !u!1 &635913852
 GameObject:
   m_ObjectHideFlags: 0
@@ -15837,6 +15825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 682735416}
 --- !u!61 &668023725
 BoxCollider2D:
@@ -30425,10 +30415,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 628385451}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 628385453}
+        m_TargetAssemblyTypeName: LevelSelectCamera, Assembly-CSharp
+        m_MethodName: Screen3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -30537,6 +30527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 1692551345}
 --- !u!61 &1230525752
 BoxCollider2D:
@@ -32260,6 +32252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 638655542}
 --- !u!61 &1301421016
 BoxCollider2D:
@@ -40580,10 +40574,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 628385451}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 628385453}
+        m_TargetAssemblyTypeName: LevelSelectCamera, Assembly-CSharp
+        m_MethodName: Screen2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -41555,6 +41549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 1618066282}
 --- !u!61 &1632145417
 BoxCollider2D:
@@ -43700,6 +43696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 262607498}
 --- !u!61 &1724434057
 BoxCollider2D:
@@ -48739,6 +48737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 1670774894}
 --- !u!61 &1953818635
 BoxCollider2D:
@@ -56036,6 +56036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 3557870405856095777}
 --- !u!4 &5632461826565580846
 Transform:
@@ -57088,7 +57090,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8809562075308375444}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b9881b64303cc014e860838bf748aaed, type: 3}
@@ -57453,7 +57455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &8811111293897204401
 SpriteRenderer:
   m_ObjectHideFlags: 0
