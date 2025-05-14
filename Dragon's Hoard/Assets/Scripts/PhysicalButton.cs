@@ -5,16 +5,17 @@ public class PhysicalButton : MonoBehaviour
     public GameObject button;
     public GameObject lightIndicator;
     public GameObject movingDoor;
-    public GameObject doorClosedPosition;
     public GameObject doorOpenedPosition;
-
     public float movingDoorSpeed = 1;
     private bool _doorOpen = false;
+    private Rigidbody2D _movingDoorRb;
+    private Vector2 _targetOffset;
     private AudioSource _audioSource;
 
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _movingDoorRb = movingDoor.GetComponent<Rigidbody2D>();
     }
 
     void OnTriggerEnter2D(Collider2D _colliderEnter)
@@ -31,12 +32,8 @@ public class PhysicalButton : MonoBehaviour
     {
         if (_doorOpen == true)
         {
-            movingDoor.transform.position = Vector3.MoveTowards(movingDoor.transform.position, doorOpenedPosition.transform.position, movingDoorSpeed * Time.deltaTime);
-        }
-        else
-        {
-            // explore physics joints
-            movingDoor.transform.position = Vector3.MoveTowards(movingDoor.transform.position, doorClosedPosition.transform.position, movingDoorSpeed * Time.deltaTime);
+            _targetOffset = doorOpenedPosition.transform.position - movingDoor.transform.position;
+            _movingDoorRb.AddForce(_targetOffset * movingDoorSpeed, ForceMode2D.Force);
         }
     }
 
