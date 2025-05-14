@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class Drag2DObject : MonoBehaviour
 {
-
+    private TrailRenderer _trail;
     private bool _isBeingDragged;
     private Vector2 _targetOffset;
     private Vector2 _forceVector;
@@ -34,6 +34,8 @@ public class Drag2DObject : MonoBehaviour
 
         _cameraShakeScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
 
+        _trail = GetComponentInChildren<TrailRenderer>();
+        _trail.enabled = false;
     }
 
     void OnMouseDown()
@@ -44,6 +46,8 @@ public class Drag2DObject : MonoBehaviour
         {
             _rigidBody.gravityScale = 0;
         }
+
+        _trail.enabled = true;
     }
 
     void OnMouseUp()
@@ -54,6 +58,8 @@ public class Drag2DObject : MonoBehaviour
         {
             _rigidBody.gravityScale = 1;
         }
+
+        _trail.enabled = false;
     }
 
     void FixedUpdate()
@@ -64,7 +70,7 @@ public class Drag2DObject : MonoBehaviour
             if (_isBeingDragged)
             {
                 _rigidBody.linearVelocity = _rigidBody.linearVelocity * 0.9f;
-                _rigidBody.AddForce(_forceVector, ForceMode2D.Force);               
+                _rigidBody.AddForce(_forceVector, ForceMode2D.Force);
             }
     
             if (_rigidBody.linearVelocityX > 1)
