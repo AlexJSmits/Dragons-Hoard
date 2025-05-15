@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3f5913e999fee43b7fd2e884fffe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseOpen: {fileID: 2800000, guid: 58c96f86c55f8d843a639e05226d50e5, type: 3}
-  mouseClosed: {fileID: 2800000, guid: 8d8ca83d488cd564db35905774f9821c, type: 3}
+  mouseOpen: {fileID: 2800000, guid: 8bf8badd08651e64cb92e34a963a99e6, type: 3}
+  mouseClosed: {fileID: 2800000, guid: c36f825e42b9b064186768a51a249fb3, type: 3}
 --- !u!1 &3860789300772977513
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,9 +57,10 @@ GameObject:
   - component: {fileID: 6266797894856285177}
   - component: {fileID: 2381012996759678174}
   - component: {fileID: 4245430205102832680}
+  - component: {fileID: 6589252801894557439}
   m_Layer: 0
   m_Name: Persistant
-  m_TagString: Untagged
+  m_TagString: Persistant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +93,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72ec86dbb5321044a8871211ebe06ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeDuration: 1
+  _audioClips:
+  - {fileID: 8300000, guid: b4e3a65629236184e96a54ba582322bd, type: 3}
+  - {fileID: 8300000, guid: 987a229182c287c4fac170d3f34f3352, type: 3}
+  - {fileID: 8300000, guid: 5c0af6ebdabe3b5429f0cb67fb3ef68a, type: 3}
+  - {fileID: 8300000, guid: 269940efb1182744c834e4d0302d5f1c, type: 3}
 --- !u!82 &4245430205102832680
 AudioSource:
   m_ObjectHideFlags: 0
@@ -102,11 +109,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aabd267e8e9e9b24099bfab4f20a0d81, type: 3}
-  m_Resource: {fileID: 8300000, guid: aabd267e8e9e9b24099bfab4f20a0d81, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b4e3a65629236184e96a54ba582322bd, type: 3}
+  m_Resource: {fileID: 8300000, guid: b4e3a65629236184e96a54ba582322bd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
-  m_Pitch: 0.9
+  m_Volume: 0.2
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -189,3 +196,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6589252801894557439
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860789300772977513}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2bba1f62b0f31334fa031cbbebe9591b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

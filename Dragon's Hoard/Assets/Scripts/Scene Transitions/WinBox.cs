@@ -39,10 +39,6 @@ public class WinBox : MonoBehaviour
         {
             _animationManager = GameObject.FindGameObjectWithTag("AnimationManager").GetComponent<Animator>();
         }
-        else
-        {
-            Debug.Log("Could not find a game object with tag 'AnimationManager");
-        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

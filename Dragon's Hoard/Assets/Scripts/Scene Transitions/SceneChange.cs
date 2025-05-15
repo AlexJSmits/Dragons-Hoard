@@ -7,11 +7,13 @@ public class SceneChange : MonoBehaviour
     public string nextScene;
     public string mainMenu;
     private Animator _sceenTransitionAnimator;
-    public float _sceneSwapDelay = 1f;
+    private float _sceneSwapDelay = 3f;
+    private DontDestroy _persistantObject;
 
     void Start()
     {
         _sceenTransitionAnimator = GameObject.FindGameObjectWithTag("TransitionCanvas").GetComponent<Animator>();
+        _persistantObject = GameObject.FindGameObjectWithTag("Persistant").GetComponent<DontDestroy>();
     }
 
     public void LoadScene()
@@ -64,6 +66,8 @@ public class SceneChange : MonoBehaviour
     void CircleTransition()
     {
         _sceenTransitionAnimator.SetTrigger("Close");
+        _persistantObject.FadeMusicOut();
+        Debug.Log("Fading Audio");
     } 
 
 }

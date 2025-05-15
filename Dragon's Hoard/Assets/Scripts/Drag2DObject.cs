@@ -35,6 +35,8 @@ public class Drag2DObject : MonoBehaviour
         _cameraShakeScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
 
         _trail = GetComponentInChildren<TrailRenderer>();
+
+        if (_trail != null)
         _trail.enabled = false;
     }
 
@@ -47,6 +49,7 @@ public class Drag2DObject : MonoBehaviour
             _rigidBody.gravityScale = 0;
         }
 
+        if (_trail != null)
         _trail.enabled = true;
     }
 
@@ -59,6 +62,7 @@ public class Drag2DObject : MonoBehaviour
             _rigidBody.gravityScale = 1;
         }
 
+        if (_trail != null)
         _trail.enabled = false;
     }
 
