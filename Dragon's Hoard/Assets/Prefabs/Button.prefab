@@ -182,7 +182,6 @@ MonoBehaviour:
   button: {fileID: 4078136839404078554}
   lightIndicator: {fileID: 3068142048407492175}
   movingDoor: {fileID: 0}
-  doorClosedPosition: {fileID: 0}
   doorOpenedPosition: {fileID: 0}
   movingDoorSpeed: 1
 --- !u!82 &6408716639113776322
@@ -194,7 +193,7 @@ AudioSource:
   m_GameObject: {fileID: 2669764410422023495}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
   m_audioClip: {fileID: 8300000, guid: c151b0ca32af93e46afabebaf35fa5a1, type: 3}
   m_Resource: {fileID: 8300000, guid: c151b0ca32af93e46afabebaf35fa5a1, type: 3}
   m_PlayOnAwake: 0

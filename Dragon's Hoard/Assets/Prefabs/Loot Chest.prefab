@@ -281,9 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b909ff9564e394eb5664aa3de0a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winCanvas: {fileID: 0}
-  currentlevel: {fileID: 0}
-  nextLevel: {fileID: 0}
+  playerProgressScriptableObject: {fileID: 0}
+  levelNumber: 0
   levelSelectGate: {fileID: 0}
 --- !u!61 &6442657500444357118
 BoxCollider2D:
@@ -340,7 +339,7 @@ AudioSource:
   m_GameObject: {fileID: 4686914534100224462}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
   m_audioClip: {fileID: 8300000, guid: f065ed75187ff5b4cb74ba5065580982, type: 3}
   m_Resource: {fileID: 8300000, guid: f065ed75187ff5b4cb74ba5065580982, type: 3}
   m_PlayOnAwake: 0
