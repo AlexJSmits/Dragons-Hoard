@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class LevelSelectCamera : MonoBehaviour
@@ -6,14 +7,16 @@ public class LevelSelectCamera : MonoBehaviour
     public GameObject cameraObject;
     public GameObject waterFall;
     public float activeScreen = 1;
-    public float moveSpeed = 1;
+    public float moveSpeed = 25;
 
     [Header("Screen Transforms")]
+    public Vector3 screen0transform;
     public Vector3 screen1transform;
     public Vector3 screen2transform;
     public Vector3 screen3transform;
-    
+
     [Header("UI Arrows")]
+    public GameObject screen0Arrows;
     public GameObject screen1Arrows;
     public GameObject screen2Arrows;
     public GameObject screen3Arrows;
@@ -39,6 +42,16 @@ public class LevelSelectCamera : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (activeScreen == 0)
+        {
+            cameraObject.transform.position = Vector3.MoveTowards(cameraObject.transform.position, screen0transform, moveSpeed * Time.deltaTime);
+            screen0Arrows.SetActive(true);
+        }
+        else
+        {
+            screen0Arrows.SetActive(false);
+        }
+
         if (activeScreen == 1)
         {
             cameraObject.transform.position = Vector3.MoveTowards(cameraObject.transform.position, screen1transform, moveSpeed * Time.deltaTime);
@@ -71,6 +84,12 @@ public class LevelSelectCamera : MonoBehaviour
             screen3Arrows.SetActive(false);
         }
 
+    }
+
+    public void Screen0()
+    {
+        activeScreen = 0;
+        playerProgressScriptableObject.cameraPosition = 0;
     }
 
     public void Screen1()

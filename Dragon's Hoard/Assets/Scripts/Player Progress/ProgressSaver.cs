@@ -10,4 +10,10 @@ public class ProgressSaver : ScriptableObject
     [Header("Level 1 Progress")]
     public int levelProgress = 1;
 
+    [Header("Volume Sliders")]
+    public float masterVolume = 1;
+    public float SFXVolume = 1;
+    public float musicVolume = 1;
+
+
 }

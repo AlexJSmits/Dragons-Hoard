@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -66,8 +67,12 @@ public class SceneChange : MonoBehaviour
     void CircleTransition()
     {
         _sceenTransitionAnimator.SetTrigger("Close");
-        _persistantObject.FadeMusicOut();
-        Debug.Log("Fading Audio");
+
+        if (_persistantObject)
+        {
+            _persistantObject.FadeMusicOut();
+            Debug.Log("Fading Audio");
+        }
     } 
 
 }
