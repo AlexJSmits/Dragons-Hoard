@@ -6,6 +6,7 @@ public class PhysicalButton : MonoBehaviour
     public GameObject lightIndicator;
     public GameObject movingDoor;
     public GameObject doorOpenedPosition;
+    public GameObject doorClosedPosition;
     public float movingDoorSpeed = 1;
     private bool _doorOpen = false;
     private Rigidbody2D _movingDoorRb;
@@ -33,6 +34,11 @@ public class PhysicalButton : MonoBehaviour
         if (_doorOpen == true)
         {
             _targetOffset = doorOpenedPosition.transform.position - movingDoor.transform.position;
+            _movingDoorRb.AddForce(_targetOffset * movingDoorSpeed, ForceMode2D.Force);
+        }
+        else if (doorClosedPosition != null)
+        {
+            _targetOffset = doorClosedPosition.transform.position - movingDoor.transform.position;
             _movingDoorRb.AddForce(_targetOffset * movingDoorSpeed, ForceMode2D.Force);
         }
     }
