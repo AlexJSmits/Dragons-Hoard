@@ -44,7 +44,7 @@ public class LevelSelectCamera : MonoBehaviour
     {
         if (activeScreen == 0)
         {
-            cameraObject.transform.position = Vector3.MoveTowards(cameraObject.transform.position, screen0transform, moveSpeed * Time.deltaTime);
+            cameraObject.transform.position = Vector3.Lerp(cameraObject.transform.position, screen0transform, moveSpeed * Time.deltaTime);
             screen0Arrows.SetActive(true);
         }
         else
@@ -54,7 +54,7 @@ public class LevelSelectCamera : MonoBehaviour
 
         if (activeScreen == 1)
         {
-            cameraObject.transform.position = Vector3.MoveTowards(cameraObject.transform.position, screen1transform, moveSpeed * Time.deltaTime);
+            cameraObject.transform.position = Vector3.Lerp(cameraObject.transform.position, screen1transform, moveSpeed * Time.deltaTime);
             screen1Arrows.SetActive(true);
         }
         else
@@ -64,7 +64,7 @@ public class LevelSelectCamera : MonoBehaviour
         
         if (activeScreen == 2)
         {
-            cameraObject.transform.position = Vector3.MoveTowards(cameraObject.transform.position, screen2transform, moveSpeed * Time.deltaTime);
+            cameraObject.transform.position = Vector3.Lerp(cameraObject.transform.position, screen2transform, moveSpeed * Time.deltaTime);
             waterFall.SetActive(true);
             screen2Arrows.SetActive(true);
         }
@@ -76,7 +76,7 @@ public class LevelSelectCamera : MonoBehaviour
         
         if (activeScreen == 3)
         {
-            cameraObject.transform.position = Vector3.MoveTowards(cameraObject.transform.position, screen3transform, moveSpeed * Time.deltaTime);
+            cameraObject.transform.position = Vector3.Lerp(cameraObject.transform.position, screen3transform, moveSpeed * Time.deltaTime);
             screen3Arrows.SetActive(true);
         }
         else

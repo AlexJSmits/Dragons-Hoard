@@ -14569,7 +14569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SFX VOLUME
+  m_text: SOUND EFFECTS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16599,7 +16599,7 @@ MonoBehaviour:
   cameraObject: {fileID: 519420028}
   waterFall: {fileID: 8809562075308375444}
   activeScreen: 1
-  moveSpeed: 25
+  moveSpeed: 2.5
   screen0transform: {x: -20, y: 0, z: -10}
   screen1transform: {x: 0, y: 0, z: -10}
   screen2transform: {x: 20, y: 0, z: -10}
@@ -51605,7 +51605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MUSIC VOLUME
+  m_text: MUSIC
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

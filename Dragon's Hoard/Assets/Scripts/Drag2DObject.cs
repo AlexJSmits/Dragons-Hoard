@@ -5,7 +5,8 @@ using Random = UnityEngine.Random;
 
 public class Drag2DObject : MonoBehaviour
 {
-    private TrailRenderer _trail;
+    private TrailRenderer _line;
+    private ParticleSystem _particles;
     private bool _isBeingDragged;
     private Vector2 _targetOffset;
     private Vector2 _forceVector;
@@ -34,36 +35,60 @@ public class Drag2DObject : MonoBehaviour
 
         _cameraShakeScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
 
-        _trail = GetComponentInChildren<TrailRenderer>();
+        _particles = GetComponentInChildren<ParticleSystem>();
+        _line = GetComponentInChildren<TrailRenderer>();
 
-        if (_trail != null)
-        _trail.enabled = false;
+        if (_particles != null)
+        {
+            _particles.Stop();
+        }
+
+        if (_line != null)
+        {
+            _line.enabled = false;
+        }
+
     }
 
     void OnMouseDown()
     {
         _isBeingDragged = true;
 
-        if(_rigidBody != null)
+        if (_rigidBody != null)
         {
             _rigidBody.gravityScale = 0;
         }
 
-        if (_trail != null)
-        _trail.enabled = true;
+        if (_particles != null)
+        {
+            _particles.Play();
+        }
+           
+        if (_line != null)
+        {
+            _line.enabled = true;
+        }
     }
 
     void OnMouseUp()
     {
         _isBeingDragged = false;
 
-        if(_rigidBody != null)
+        if (_rigidBody != null)
         {
             _rigidBody.gravityScale = 1;
         }
 
-        if (_trail != null)
-        _trail.enabled = false;
+        if (_particles != null)
+        {
+            _particles.Stop();
+        }
+           
+        
+        if (_line != null)
+        {
+            _line.enabled = false;
+        }
     }
 
     void FixedUpdate()
