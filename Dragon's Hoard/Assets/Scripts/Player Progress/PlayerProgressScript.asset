@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d5dfd174c339a4293304f5438adee6, type: 3}
   m_Name: PlayerProgressScript
   m_EditorClassIdentifier: 
-  cameraPosition: 2
+  cameraPosition: 1
   levelProgress: 1
   masterVolume: 1
   SFXVolume: 1

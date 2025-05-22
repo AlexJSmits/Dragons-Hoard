@@ -13,7 +13,7 @@ public class MovingMetalDoor : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(_rigidBody.linearVelocity.magnitude > 0.1f)
+        if (_rigidBody.linearVelocity.magnitude > 0.1f)
         {
             if (_audioSource.isPlaying == false)
             _audioSource.Play();
