@@ -23,8 +23,8 @@ TagManager:
   - Grabable
   - Moving Platform
   - LevelBounds
-  - 
-  - 
+  - Tunnel
+  - Vertical Moving Platform
   - 
   - 
   - 

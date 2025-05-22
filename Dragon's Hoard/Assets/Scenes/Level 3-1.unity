@@ -13039,7 +13039,7 @@ PrefabInstance:
       objectReference: {fileID: 1948471295}
     - target: {fileID: 4081277635458240377, guid: 57f88666cd26a4e478d4f085a3f257a5, type: 3}
       propertyPath: movingDoorSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4081277635458240377, guid: 57f88666cd26a4e478d4f085a3f257a5, type: 3}
       propertyPath: raycastTransform
