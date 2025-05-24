@@ -1758,8 +1758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1119b6799c0fa4a9998cdf68b9b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level 3-2
-  mainMenu: Level Select
+  nextScene: Level 3-3
+  mainMenu: End Level
 --- !u!224 &463178860 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6162040645216115447, guid: f05c30b64097ce441b7894c541cd0758, type: 3}
@@ -7558,8 +7558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1119b6799c0fa4a9998cdf68b9b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level 3-2
-  mainMenu: Level Select
+  nextScene: Level 3-3
+  mainMenu: End Level
 --- !u!114 &1885525032
 MonoBehaviour:
   m_ObjectHideFlags: 0

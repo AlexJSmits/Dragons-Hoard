@@ -73,10 +73,10 @@ public class WinBox : MonoBehaviour
     }
 
     void Update()
-    {
+    {        
         if (_isCounting && _winCountdown > 0)
         {
-            _text.text =  Mathf.Round(_winCountdown).ToString();
+            _text.text = Mathf.Round(_winCountdown).ToString();
             _winCountdown -= Time.deltaTime;
         }
         else if (_isCounting && _winCountdown <= 0)
