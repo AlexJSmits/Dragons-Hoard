@@ -13,7 +13,7 @@ public class WinBox : MonoBehaviour
     private int _totalNumberOfValuables;
     private int _numberOfValuables = 0;
     private TextMeshPro _text;
-    private float _winCountdown = 3;
+    private float _winCountdown = 4;
     private bool _isCounting;
     private NoiseMeter _noiseMeter;
     private AudioSource _audio;
@@ -69,15 +69,16 @@ public class WinBox : MonoBehaviour
             _numberOfValuables -= 1;
             _text.text = null;
             _isCounting = false;
-            _winCountdown = 3;
+            _winCountdown = 4;
         }
     }
 
     void PlayCountDownNoise()
     {
         chestCountdownAudio.Play();
+        _winCountdown -= 1;
 
-        if (_isCounting && _winCountdown >= 1)
+        if (_isCounting && _winCountdown >= 2)
         {
             Invoke("PlayCountDownNoise", 1);
         } 
@@ -93,12 +94,12 @@ public class WinBox : MonoBehaviour
             }
         }
 
-        if (_isCounting && _winCountdown > 0)
+        if (_isCounting && _winCountdown > 0.1)
         {
             _text.text = Mathf.Round(_winCountdown).ToString();
-            _winCountdown -= Time.deltaTime;
+            //_winCountdown -= Time.deltaTime;
         }
-        else if (_isCounting && _winCountdown <= 0)
+        else if (_isCounting && _winCountdown <= 0.1)
         {
             _text.text = null;
             WinCondition();
