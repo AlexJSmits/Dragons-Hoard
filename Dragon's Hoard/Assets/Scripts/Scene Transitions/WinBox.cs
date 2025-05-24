@@ -18,6 +18,7 @@ public class WinBox : MonoBehaviour
     private NoiseMeter _noiseMeter;
     private AudioSource _audio;
     private Animator _animationManager;
+    public AudioSource chestCountdownAudio;
 
     void Start()
     {
@@ -72,8 +73,26 @@ public class WinBox : MonoBehaviour
         }
     }
 
+    void PlayCountDownNoise()
+    {
+        chestCountdownAudio.Play();
+
+        if (_isCounting && _winCountdown >= 1)
+        {
+            Invoke("PlayCountDownNoise", 1);
+        } 
+    }
+
     void Update()
-    {        
+    {
+        if (chestCountdownAudio != null)
+        {
+            if (_isCounting && chestCountdownAudio.isPlaying == false)
+            {
+                PlayCountDownNoise();
+            }
+        }
+
         if (_isCounting && _winCountdown > 0)
         {
             _text.text = Mathf.Round(_winCountdown).ToString();

@@ -3781,7 +3781,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -4197,7 +4197,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -6677,6 +6677,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 257708120}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &306775013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9949,8 +9950,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10044,7 +10045,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15097,6 +15098,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 9
   levelSelectGate: {fileID: 1480713984}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &556354212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15412,8 +15414,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15507,7 +15509,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15665,7 +15667,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -18681,8 +18683,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19335,6 +19337,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 682735416}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &668023725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20669,6 +20672,135 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7549261, y: 1.5183458}
   m_EdgeRadius: 0
+--- !u!1 &766535515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766535517}
+  - component: {fileID: 766535516}
+  m_Layer: 0
+  m_Name: GateCountDownAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &766535516
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766535515}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e9b0b38fae505b640b6fb16d1277ec0e, type: 3}
+  m_Resource: {fileID: 8300000, guid: e9b0b38fae505b640b6fb16d1277ec0e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &766535517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766535515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772899412
 GameObject:
   m_ObjectHideFlags: 0
@@ -23001,8 +23133,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
@@ -25027,8 +25159,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26146,8 +26278,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26241,7 +26373,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34676,8 +34808,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34771,7 +34903,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35016,7 +35148,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -35273,6 +35405,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 1692551345}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1230525752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36997,6 +37130,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 638655542}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1301421016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39722,7 +39856,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -46001,7 +46135,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -46253,8 +46387,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -46348,7 +46482,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48164,6 +48298,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 7
   levelSelectGate: {fileID: 1618066282}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1632145417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50697,6 +50832,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 8
   levelSelectGate: {fileID: 262607498}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1724434057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56512,6 +56648,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 1670774894}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1953818635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57447,8 +57584,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -57542,7 +57679,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -57710,8 +57847,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -57805,7 +57942,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -57973,8 +58110,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58068,7 +58205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -62634,8 +62771,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7603b81656f0f9843af771324a175880, type: 2}
-  m_sharedMaterial: {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8022c455f664e34281eacbb425bd090, type: 2}
+  m_sharedMaterial: {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -64141,6 +64278,7 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 3557870405856095777}
+  chestCountdownAudio: {fileID: 766535516}
 --- !u!4 &5632461826565580846
 Transform:
   m_ObjectHideFlags: 0
@@ -65476,7 +65614,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8083442859002656964, guid: 7603b81656f0f9843af771324a175880, type: 2}
+  - {fileID: 6808965668933994994, guid: c8022c455f664e34281eacbb425bd090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65744,3 +65882,4 @@ SceneRoots:
   - {fileID: 628385452}
   - {fileID: 1135276275}
   - {fileID: 1709427353}
+  - {fileID: 766535517}
