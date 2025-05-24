@@ -16,6 +16,8 @@ public class Drag2DObject : MonoBehaviour
     public AudioClip[] audioClips;
     private NoiseMeter _noiseMeter;
     private CameraShake _cameraShakeScript;
+    public AudioClip grabSound;
+    public AudioClip releaseSound;
 
     void Start()
     {
@@ -53,6 +55,8 @@ public class Drag2DObject : MonoBehaviour
     void OnMouseDown()
     {
         _isBeingDragged = true;
+        _impactSound.volume = 0.2f;
+        _impactSound.PlayOneShot(grabSound);
 
         if (_rigidBody != null)
         {
@@ -73,6 +77,8 @@ public class Drag2DObject : MonoBehaviour
     void OnMouseUp()
     {
         _isBeingDragged = false;
+        _impactSound.volume = 0.2f;
+        _impactSound.PlayOneShot(releaseSound);
 
         if (_rigidBody != null)
         {

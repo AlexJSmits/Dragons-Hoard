@@ -5040,6 +5040,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0fa33588d2fe3914aa5b59fb7c3198cc, type: 3}
   - {fileID: 8300000, guid: ccf5d972280903f4583a201aeca410b6, type: 3}
   - {fileID: 8300000, guid: 49f855fa45240e2429a48db48f3bd4a8, type: 3}
+  grabSound: {fileID: 8300000, guid: c3aaddb46a394c644a3c8d9fa75c5041, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
 --- !u!82 &6138260847638288582
 AudioSource:
   m_ObjectHideFlags: 0
