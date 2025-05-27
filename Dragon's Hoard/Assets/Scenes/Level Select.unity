@@ -832,7 +832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -4974020292921473001, guid: bb62215119d8d6748b3bf75c9183a386, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3781,8 +3781,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -4197,8 +4197,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -5517,6 +5517,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &257708124
 Rigidbody2D:
   serializedVersion: 5
@@ -6018,6 +6020,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &262607502
 Rigidbody2D:
   serializedVersion: 5
@@ -6677,6 +6681,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 257708120}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &306775013
 BoxCollider2D:
@@ -14826,9 +14832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Metallic door sliding SOUND
-
-'
+  m_text: miscellaneous foley
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12af0018b8285d41acc7c4f2de69482, type: 2}
   m_sharedMaterial: {fileID: 3721830510327256755, guid: c12af0018b8285d41acc7c4f2de69482, type: 2}
@@ -15098,6 +15102,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 9
   levelSelectGate: {fileID: 1480713984}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &556354212
 BoxCollider2D:
@@ -15667,8 +15673,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -16976,6 +16982,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &638655546
 Rigidbody2D:
   serializedVersion: 5
@@ -19337,6 +19345,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 682735416}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &668023725
 BoxCollider2D:
@@ -19824,6 +19834,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &682735420
 Rigidbody2D:
   serializedVersion: 5
@@ -21487,7 +21499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6431373, g: 0.59607846, b: 0.49411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -26739,7 +26751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.9019608, b: 0.98039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -35148,8 +35160,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -35405,6 +35417,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 1692551345}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1230525752
 BoxCollider2D:
@@ -37130,6 +37144,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 638655542}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1301421016
 BoxCollider2D:
@@ -39615,7 +39631,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -4974020292921473001, guid: bb62215119d8d6748b3bf75c9183a386, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39856,8 +39872,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -42025,6 +42041,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &1480713988
 Rigidbody2D:
   serializedVersion: 5
@@ -45432,7 +45450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -4974020292921473001, guid: bb62215119d8d6748b3bf75c9183a386, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -46135,8 +46153,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2027752026294809584, guid: ce9b8ac6b021f6b4787480d71d1a378f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5108a9d20a54c674cb1dbd6ddd060659, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
+  m_Resource: {fileID: 8300000, guid: ac3e05026ebecfe45b89a8d58dc4d827, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -46857,6 +46875,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &1618066286
 Rigidbody2D:
   serializedVersion: 5
@@ -48298,6 +48318,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 7
   levelSelectGate: {fileID: 1618066282}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1632145417
 BoxCollider2D:
@@ -48656,7 +48678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.9019608, b: 0.98039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -49083,6 +49105,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &1670774898
 Rigidbody2D:
   serializedVersion: 5
@@ -50128,6 +50152,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!50 &1692551349
 Rigidbody2D:
   serializedVersion: 5
@@ -50832,6 +50858,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 8
   levelSelectGate: {fileID: 262607498}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1724434057
 BoxCollider2D:
@@ -56394,7 +56422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6431373, g: 0.59607846, b: 0.49411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -56648,6 +56676,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 1670774894}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!61 &1953818635
 BoxCollider2D:
@@ -57084,7 +57114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.9019608, b: 0.98039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -61849,7 +61879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6431373, g: 0.59607846, b: 0.49411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -64123,6 +64153,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
+  grabSound: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!4 &4895664941016123203
 Transform:
   m_ObjectHideFlags: 0
@@ -64278,6 +64310,8 @@ MonoBehaviour:
   playerProgressScriptableObject: {fileID: 0}
   levelNumber: 0
   levelSelectGate: {fileID: 3557870405856095777}
+  countDownText: {fileID: 0}
+  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 766535516}
 --- !u!4 &5632461826565580846
 Transform:

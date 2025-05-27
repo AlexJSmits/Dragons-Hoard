@@ -12,7 +12,8 @@ public class WinBox : MonoBehaviour
     public GameObject levelSelectGate;
     private int _totalNumberOfValuables;
     private int _numberOfValuables = 0;
-    private TextMeshPro _text;
+    public TextMeshPro countDownText;
+    public TextMeshPro valuableTrackerText;
     private float _winCountdown = 4;
     private bool _isCounting;
     private NoiseMeter _noiseMeter;
@@ -27,7 +28,7 @@ public class WinBox : MonoBehaviour
             _totalNumberOfValuables = GameObject.FindGameObjectsWithTag("Valuable").Length;
         }
 
-        _text = GetComponentInChildren<TextMeshPro>();
+        countDownText = GetComponentInChildren<TextMeshPro>();
 
         if (GameObject.FindGameObjectWithTag("NoiseMeter"))
         {
@@ -67,7 +68,7 @@ public class WinBox : MonoBehaviour
         if(collision.gameObject.CompareTag("Valuable"))
         {
             _numberOfValuables -= 1;
-            _text.text = null;
+            countDownText.text = null;
             _isCounting = false;
             _winCountdown = 4;
         }
@@ -86,6 +87,11 @@ public class WinBox : MonoBehaviour
 
     void Update()
     {
+        if (valuableTrackerText != null)
+        {
+            valuableTrackerText.text = _numberOfValuables.ToString() + "/" + _totalNumberOfValuables.ToString();
+        }
+
         if (chestCountdownAudio != null)
         {
             if (_isCounting && chestCountdownAudio.isPlaying == false)
@@ -96,12 +102,12 @@ public class WinBox : MonoBehaviour
 
         if (_isCounting && _winCountdown > 0.1)
         {
-            _text.text = Mathf.Round(_winCountdown).ToString();
+            countDownText.text = Mathf.Round(_winCountdown).ToString();
             //_winCountdown -= Time.deltaTime;
         }
         else if (_isCounting && _winCountdown <= 0.1)
         {
-            _text.text = null;
+            countDownText.text = null;
             WinCondition();
             _isCounting = false;
         }
