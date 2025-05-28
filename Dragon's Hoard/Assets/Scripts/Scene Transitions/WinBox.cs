@@ -134,6 +134,7 @@ public class WinBox : MonoBehaviour
     void WinCondition()
     {
         _statTrackerScript._onTheClock = false;
+        _statTrackerScript.SetHighScore();
 
         if (_audio)
         {

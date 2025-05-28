@@ -80,51 +80,56 @@ public class StatTracker : MonoBehaviour
             _elaspedTime += Time.deltaTime;
             currentTime.text = _elaspedTime.ToString("F2");
         }
-
-        if (float.Parse(currentTime.text) > float.Parse(bestTime.text))
-        {
-            bestTime.text = currentTime.text;
-            SetHighScore();
-        }
+        
     }
 
     public void SetHighScore()
     {
+
+        if (float.Parse(currentTime.text) < float.Parse(bestTime.text))
+        {
+            bestTime = currentTime;
+        }
+        else if (float.Parse(bestTime.text) == 0f)
+        {
+            bestTime = currentTime;
+        }
+        
         if (_sceneReference.name == "Level 1-1")
-        {
-            playerProgressScriptableObject.level_1_1 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 1-2")
-        {
-            playerProgressScriptableObject.level_1_2  = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 1-3")
-        {
-            playerProgressScriptableObject.level_1_3 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 2-1")
-        {
-            playerProgressScriptableObject.level_2_1 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 2-2")
-        {
-            playerProgressScriptableObject.level_2_2 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 2-2")
-        {
-            playerProgressScriptableObject.level_2_3 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 3-1")
-        {
-            playerProgressScriptableObject.level_3_1 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 3-2")
-        {
-            playerProgressScriptableObject.level_3_2 = float.Parse(bestTime.text);
-        }
-        else if (_sceneReference.name == "Level 3-2")
-        {
-            playerProgressScriptableObject.level_3_3 = float.Parse(bestTime.text);
-        }
+            {
+                playerProgressScriptableObject.level_1_1 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 1-2")
+            {
+                playerProgressScriptableObject.level_1_2 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 1-3")
+            {
+                playerProgressScriptableObject.level_1_3 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 2-1")
+            {
+                playerProgressScriptableObject.level_2_1 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 2-2")
+            {
+                playerProgressScriptableObject.level_2_2 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 2-2")
+            {
+                playerProgressScriptableObject.level_2_3 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 3-1")
+            {
+                playerProgressScriptableObject.level_3_1 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 3-2")
+            {
+                playerProgressScriptableObject.level_3_2 = float.Parse(bestTime.text);
+            }
+            else if (_sceneReference.name == "Level 3-2")
+            {
+                playerProgressScriptableObject.level_3_3 = float.Parse(bestTime.text);
+            }
     }
 }

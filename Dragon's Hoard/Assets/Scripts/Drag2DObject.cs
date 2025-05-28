@@ -82,6 +82,7 @@ public class Drag2DObject : MonoBehaviour
         _isBeingDragged = false;
         _impactSound.volume = 0.2f;
         _impactSound.PlayOneShot(releaseSound);
+        windSound.volume = 0;
 
         if (_rigidBody != null)
         {
