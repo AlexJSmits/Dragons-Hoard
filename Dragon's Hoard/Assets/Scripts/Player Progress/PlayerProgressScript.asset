@@ -17,3 +17,12 @@ MonoBehaviour:
   masterVolume: 1
   SFXVolume: 1
   musicVolume: 1
+  level_1_1: 0
+  level_1_2: 0
+  level_1_3: 0
+  level_2_1: 0
+  level_2_2: 0
+  level_2_3: 0
+  level_3_1: 0
+  level_3_2: 0
+  level_3_3: 0

@@ -14,7 +14,9 @@ public class SceneChange : MonoBehaviour
     void Start()
     {
         _sceenTransitionAnimator = GameObject.FindGameObjectWithTag("TransitionCanvas").GetComponent<Animator>();
-        _persistantObject = GameObject.FindGameObjectWithTag("Persistant").GetComponent<DontDestroy>();
+
+        if (GameObject.FindGameObjectWithTag("Persistant"))
+            _persistantObject = GameObject.FindGameObjectWithTag("Persistant").GetComponent<DontDestroy>();
     }
 
     public void LoadScene()

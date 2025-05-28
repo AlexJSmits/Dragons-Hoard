@@ -11,6 +11,8 @@ TagManager:
   - AnimationManager
   - TransitionCanvas
   - DragonWakeUpNoise
+  - Stats
+  - Chest
   layers:
   - Default
   - TransparentFX

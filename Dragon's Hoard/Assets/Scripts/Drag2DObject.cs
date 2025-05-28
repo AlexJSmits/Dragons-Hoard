@@ -18,9 +18,12 @@ public class Drag2DObject : MonoBehaviour
     private CameraShake _cameraShakeScript;
     public AudioClip grabSound;
     public AudioClip releaseSound;
+    public AudioSource windSound;
 
     void Start()
     {
+        windSound.volume = 0;
+
         Time.timeScale = 1;
 
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -99,23 +102,26 @@ public class Drag2DObject : MonoBehaviour
 
     void FixedUpdate()
     {
-            _targetOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            _forceVector = _targetOffset * forceMagnitude;
+        
 
-            if (_isBeingDragged)
-            {
-                _rigidBody.linearVelocity = _rigidBody.linearVelocity * 0.9f;
-                _rigidBody.AddForce(_forceVector, ForceMode2D.Force);
-            }
-    
-            if (_rigidBody.linearVelocityX > 1)
-            {
-                _rigidBody.AddTorque(-10 * Time.deltaTime);
-            }
-            else if (_rigidBody.linearVelocityX < -1)
-            {
-                _rigidBody.AddTorque(10 * Time.deltaTime);
-            }
+        _targetOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        _forceVector = _targetOffset * forceMagnitude;
+
+        if (_isBeingDragged)
+        {
+            _rigidBody.linearVelocity = _rigidBody.linearVelocity * 0.9f;
+            _rigidBody.AddForce(_forceVector, ForceMode2D.Force);
+            windSound.volume = _rigidBody.linearVelocity.magnitude / 500;
+        }
+
+        if (_rigidBody.linearVelocityX > 1)
+        {
+            _rigidBody.AddTorque(-10 * Time.deltaTime);
+        }
+        else if (_rigidBody.linearVelocityX < -1)
+        {
+            _rigidBody.AddTorque(10 * Time.deltaTime);
+        }
             
     }
 

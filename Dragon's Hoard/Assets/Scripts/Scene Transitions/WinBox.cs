@@ -8,12 +8,11 @@ public class WinBox : MonoBehaviour
     [Header("Level Progress Tracking")]
     public ProgressSaver playerProgressScriptableObject;
     public int levelNumber;
-
+    private StatTracker _statTrackerScript;
     public GameObject levelSelectGate;
     private int _totalNumberOfValuables;
     private int _numberOfValuables = 0;
     public TextMeshPro countDownText;
-    public TextMeshPro valuableTrackerText;
     private float _winCountdown = 4;
     private bool _isCounting;
     private NoiseMeter _noiseMeter;
@@ -23,9 +22,17 @@ public class WinBox : MonoBehaviour
 
     void Start()
     {
+        if (GameObject.FindGameObjectWithTag("Stats"))
+        {
+            _statTrackerScript = GameObject.FindGameObjectWithTag("Stats").GetComponent<StatTracker>();
+        }     
+
         if (levelSelectGate == null)
         {
             _totalNumberOfValuables = GameObject.FindGameObjectsWithTag("Valuable").Length;
+            
+            if (_statTrackerScript != null)
+                _statTrackerScript.totalNumberOfValuables = _totalNumberOfValuables;
         }
 
         countDownText = GetComponentInChildren<TextMeshPro>();
@@ -47,17 +54,25 @@ public class WinBox : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Valuable"))
         {
-            if(collision.gameObject == levelSelectGate)
+            if (collision.gameObject == levelSelectGate)
             {
                 _numberOfValuables += 1;
                 _isCounting = true;
+
+                
             }
             else
             {
                 _numberOfValuables += 1;
+                if (_statTrackerScript != null)
+                {
+                    _statTrackerScript.numberOfValuables = _numberOfValuables;
+                }
+
                 if (_numberOfValuables == _totalNumberOfValuables)
                 {
                     _isCounting = true;
+
                 }
             }
         }
@@ -68,8 +83,15 @@ public class WinBox : MonoBehaviour
         if(collision.gameObject.CompareTag("Valuable"))
         {
             _numberOfValuables -= 1;
+
+            if (_statTrackerScript != null)
+            {
+                _statTrackerScript.numberOfValuables = _numberOfValuables;
+            }
+            
             countDownText.text = null;
             _isCounting = false;
+            chestCountdownAudio.Stop();
             _winCountdown = 4;
         }
     }
@@ -87,10 +109,6 @@ public class WinBox : MonoBehaviour
 
     void Update()
     {
-        if (valuableTrackerText != null)
-        {
-            valuableTrackerText.text = _numberOfValuables.ToString() + "/" + _totalNumberOfValuables.ToString();
-        }
 
         if (chestCountdownAudio != null)
         {
@@ -115,6 +133,7 @@ public class WinBox : MonoBehaviour
 
     void WinCondition()
     {
+        _statTrackerScript._onTheClock = false;
 
         if (_audio)
         {
