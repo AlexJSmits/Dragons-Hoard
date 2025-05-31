@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 6547211555817505856}
   - component: {fileID: 5955552246128208080}
   m_Layer: 5
-  m_Name: Best Time
+  m_Name: Treasures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5498,6 +5498,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1417626964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5955552246128208080, guid: 73245806606153a4d92ae008b239aeba, type: 3}
+  m_PrefabInstance: {fileID: 2121786518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1430438005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1061575047479578184, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
@@ -8150,6 +8161,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6099209878090144984, guid: 293ecd3c1219cf546965ed62c8428688, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402110665611227492, guid: 293ecd3c1219cf546965ed62c8428688, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6499509768930469276, guid: 293ecd3c1219cf546965ed62c8428688, type: 3}
@@ -12696,6 +12711,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6129436354878223386, guid: 73245806606153a4d92ae008b239aeba, type: 3}
+      propertyPath: treasureCount
+      value: 
+      objectReference: {fileID: 1417626964}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12959,6 +12978,10 @@ PrefabInstance:
       propertyPath: chestCountdownAudio
       value: 
       objectReference: {fileID: 1275858004075003164}
+    - target: {fileID: 2760494877796481016, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
+      propertyPath: playerProgressScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
     - target: {fileID: 4686914534100224462, guid: 702a63e76426ecd44bf77820c4ae9a94, type: 3}
       propertyPath: m_Name
       value: Loot Chest

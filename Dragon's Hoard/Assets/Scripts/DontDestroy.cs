@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
+    public ProgressSaver playerProgressScriptableObject;
     public float _fadeDuration = 2;
     public AudioClip[] _audioClips;
 
@@ -19,6 +20,7 @@ public class DontDestroy : MonoBehaviour
 
     void Start()
     {
+        playerProgressScriptableObject.LoadGame();
         _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _animator.speed /= _fadeDuration;
@@ -38,8 +40,9 @@ public class DontDestroy : MonoBehaviour
     public void FadeMusicIn()
     {
         _sceneReference = SceneManager.GetActiveScene();
+        _animator.SetTrigger("Wake");
 
-        if(_sceneReference.name == "Level 1-1" || _sceneReference.name == "Level 1-2" || _sceneReference.name == "Level 1-3")
+        if (_sceneReference.name == "Level 1-1" || _sceneReference.name == "Level 1-2" || _sceneReference.name == "Level 1-3")
         {
             if (_audioSource.clip != _audioClips[1])
             {
@@ -69,7 +72,6 @@ public class DontDestroy : MonoBehaviour
             _audioSource.Play();
         }
 
-        _animator.SetTrigger("Wake");
     }
 
 }

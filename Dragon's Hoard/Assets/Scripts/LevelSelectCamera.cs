@@ -61,7 +61,7 @@ public class LevelSelectCamera : MonoBehaviour
         {
             screen1Arrows.SetActive(false);
         }
-        
+
         if (activeScreen == 2)
         {
             cameraObject.transform.position = Vector3.Lerp(cameraObject.transform.position, screen2transform, moveSpeed * Time.deltaTime);

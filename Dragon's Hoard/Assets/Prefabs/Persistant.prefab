@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72ec86dbb5321044a8871211ebe06ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
   _fadeDuration: 1
   _audioClips:
   - {fileID: 8300000, guid: b4e3a65629236184e96a54ba582322bd, type: 3}

@@ -22,7 +22,10 @@ public class Drag2DObject : MonoBehaviour
 
     void Start()
     {
-        windSound.volume = 0;
+        if (windSound != null)
+        {
+            windSound.volume = 0;
+        }
 
         Time.timeScale = 1;
 
@@ -58,8 +61,13 @@ public class Drag2DObject : MonoBehaviour
     void OnMouseDown()
     {
         _isBeingDragged = true;
-        _impactSound.volume = 0.2f;
-        _impactSound.PlayOneShot(grabSound);
+
+        if (_impactSound != null)
+        {
+            _impactSound.volume = 0.2f;
+            _impactSound.PlayOneShot(grabSound);
+        }
+        
 
         if (_rigidBody != null)
         {
@@ -82,7 +90,10 @@ public class Drag2DObject : MonoBehaviour
         _isBeingDragged = false;
         _impactSound.volume = 0.2f;
         _impactSound.PlayOneShot(releaseSound);
-        windSound.volume = 0;
+        if (windSound != null)
+        {
+            windSound.volume = 0;
+        }
 
         if (_rigidBody != null)
         {
@@ -104,7 +115,6 @@ public class Drag2DObject : MonoBehaviour
     void FixedUpdate()
     {
         
-
         _targetOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         _forceVector = _targetOffset * forceMagnitude;
 
@@ -112,7 +122,10 @@ public class Drag2DObject : MonoBehaviour
         {
             _rigidBody.linearVelocity = _rigidBody.linearVelocity * 0.9f;
             _rigidBody.AddForce(_forceVector, ForceMode2D.Force);
-            windSound.volume = _rigidBody.linearVelocity.magnitude / 500;
+            if (windSound != null)
+            {   
+                windSound.volume = _rigidBody.linearVelocity.magnitude / 500;
+            }
         }
 
         if (_rigidBody.linearVelocityX > 1)

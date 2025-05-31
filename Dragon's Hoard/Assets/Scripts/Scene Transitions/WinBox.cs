@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using TMPro;
 using Unity.Mathematics;
@@ -92,36 +93,47 @@ public class WinBox : MonoBehaviour
             countDownText.text = null;
             _isCounting = false;
             chestCountdownAudio.Stop();
-            _winCountdown = 4;
         }
     }
 
     void PlayCountDownNoise()
     {
-        chestCountdownAudio.Play();
-        _winCountdown -= 1;
-
-        if (_isCounting && _winCountdown >= 2)
+        if (_winCountdown >= 2 && _isCounting)
         {
+            chestCountdownAudio.Play();
+        }
+        else if (_isCounting == false)
+        {
+            chestCountdownAudio.Stop();
+        }
+
+        if (_isCounting && _winCountdown >= 1)
+        {
+            _winCountdown -= 1;
             Invoke("PlayCountDownNoise", 1);
-        } 
+        }
+ 
     }
 
     void Update()
     {
+        if (_isCounting == false)
+        {
+            _winCountdown = 4;
+        }
+           
 
         if (chestCountdownAudio != null)
-        {
-            if (_isCounting && chestCountdownAudio.isPlaying == false)
             {
-                PlayCountDownNoise();
+                if (_isCounting && chestCountdownAudio.isPlaying == false && _winCountdown >= 1)
+                {
+                    PlayCountDownNoise();
+                }
             }
-        }
 
         if (_isCounting && _winCountdown > 0.1)
         {
             countDownText.text = Mathf.Round(_winCountdown).ToString();
-            //_winCountdown -= Time.deltaTime;
         }
         else if (_isCounting && _winCountdown <= 0.1)
         {
@@ -133,8 +145,13 @@ public class WinBox : MonoBehaviour
 
     void WinCondition()
     {
-        _statTrackerScript._onTheClock = false;
-        _statTrackerScript.SetHighScore();
+
+        if (_statTrackerScript != null)
+        {
+            _statTrackerScript._onTheClock = false;
+            _statTrackerScript.SetHighScore();
+            playerProgressScriptableObject.SaveGame();
+        }
 
         if (_audio)
         {
