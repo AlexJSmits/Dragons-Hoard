@@ -19,6 +19,7 @@ public class Drag2DObject : MonoBehaviour
     public AudioClip grabSound;
     public AudioClip releaseSound;
     public AudioSource windSound;
+    public AudioSource sparkleSound;
 
     void Start()
     {
@@ -60,6 +61,11 @@ public class Drag2DObject : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (sparkleSound != null)
+        {
+            sparkleSound.Play();
+        }
+
         _isBeingDragged = true;
 
         if (_impactSound != null)
@@ -95,6 +101,11 @@ public class Drag2DObject : MonoBehaviour
             windSound.volume = 0;
         }
 
+        if (sparkleSound != null)
+        {
+            sparkleSound.Stop();
+        }
+
         if (_rigidBody != null)
         {
             _rigidBody.gravityScale = 1;
@@ -122,9 +133,10 @@ public class Drag2DObject : MonoBehaviour
         {
             _rigidBody.linearVelocity = _rigidBody.linearVelocity * 0.9f;
             _rigidBody.AddForce(_forceVector, ForceMode2D.Force);
+
             if (windSound != null)
-            {   
-                windSound.volume = _rigidBody.linearVelocity.magnitude / 500;
+            {
+                windSound.volume = _rigidBody.linearVelocity.magnitude / 400;
             }
         }
 

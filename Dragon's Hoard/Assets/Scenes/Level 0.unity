@@ -8808,6 +8808,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1484465290}
     m_Modifications:
+    - target: {fileID: 376979483580446054, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3562804803920421931, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
       propertyPath: m_Name
       value: Object_Loot_1

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d5dfd174c339a4293304f5438adee6, type: 3}
   m_Name: PlayerProgressScript
   m_EditorClassIdentifier: 
-  cameraPosition: 3
-  levelProgress: 8
+  cameraPosition: 1
+  levelProgress: 1
   masterVolume: 1
   SFXVolume: 1
-  musicVolume: 0.4
+  musicVolume: 1
   level_0: 0
   level_1_1: 0
   level_1_2: 0
@@ -27,11 +27,11 @@ MonoBehaviour:
   level_3_1: 0
   level_3_2: 0
   level_3_3: 0
-  _level2FirstTime: 0
-  _level3FirstTime: 0
-  _level4FirstTime: 0
-  _level5FirstTime: 0
-  _level6FirstTime: 0
-  _level7FirstTime: 0
+  _level2FirstTime: 1
+  _level3FirstTime: 1
+  _level4FirstTime: 1
+  _level5FirstTime: 1
+  _level6FirstTime: 1
+  _level7FirstTime: 1
   _level8FirstTime: 1
   _level9FirstTime: 1

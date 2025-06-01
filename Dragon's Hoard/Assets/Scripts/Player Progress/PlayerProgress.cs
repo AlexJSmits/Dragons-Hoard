@@ -28,11 +28,6 @@ public class PlayerProgress : MonoBehaviour
     public Drag2DObject levelGate_3_3;
     public GameObject woodenBoards_3_3;
 
-
-    //bools to flag when a level is first unlocked:
-    
-
-
     void Start()
     {
         if (playerProgressScriptableObject.levelProgress >= 2)
@@ -78,7 +73,7 @@ public class PlayerProgress : MonoBehaviour
                 {
                     cameraScript.Screen2();
                 }
-                
+
                 playerProgressScriptableObject._level4FirstTime = false;
             }
 
@@ -114,9 +109,9 @@ public class PlayerProgress : MonoBehaviour
 
                 playerProgressScriptableObject._level6FirstTime = false;
             }
-            
-                
-            
+
+
+
         }
 
         if (playerProgressScriptableObject.levelProgress >= 7)
@@ -164,6 +159,19 @@ public class PlayerProgress : MonoBehaviour
                 }
 
                 playerProgressScriptableObject._level9FirstTime = false;
+            }
+        }
+
+        if (playerProgressScriptableObject.levelProgress >= 10)
+        {
+            if (playerProgressScriptableObject._level10FirstTime == true)
+            {
+                if (cameraScript.activeScreen != 0)
+                {
+                    cameraScript.Screen0();
+                }
+
+                playerProgressScriptableObject._level10FirstTime = false;
             }
         }
     }

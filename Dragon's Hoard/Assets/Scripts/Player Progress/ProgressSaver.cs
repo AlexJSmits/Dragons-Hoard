@@ -35,6 +35,7 @@ public class ProgressSaver : ScriptableObject
     public bool _level7FirstTime = true;
     public bool _level8FirstTime = true;
     public bool _level9FirstTime = true;
+    public bool _level10FirstTime = true;
 
     public void SaveGame()
     {
@@ -46,6 +47,14 @@ public class ProgressSaver : ScriptableObject
         PlayerPrefs.SetFloat("musicVolume", musicVolume);
 
         PlayerPrefs.SetInt("_level2FirstTime", _level2FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level3FirstTime", _level3FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level4FirstTime", _level4FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level5FirstTime", _level5FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level6FirstTime", _level6FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level7FirstTime", _level7FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level8FirstTime", _level8FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level9FirstTime", _level9FirstTime ? 1 : 0);
+        PlayerPrefs.SetInt("_level10FirstTime", _level10FirstTime ? 1 : 0);
     }
 
     public void LoadGame()
@@ -67,6 +76,7 @@ public class ProgressSaver : ScriptableObject
             _level7FirstTime = PlayerPrefs.GetInt("_level7FirstTime") != 0;
             _level8FirstTime = PlayerPrefs.GetInt("_level8FirstTime") != 0;
             _level9FirstTime = PlayerPrefs.GetInt("_level9FirstTime") != 0;
+            _level9FirstTime = PlayerPrefs.GetInt("_level10FirstTime") != 0;
         }
     }
 }

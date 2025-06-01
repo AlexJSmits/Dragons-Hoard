@@ -923,7 +923,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.7
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5173,6 +5173,7 @@ MonoBehaviour:
   grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
   releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
   windSound: {fileID: 4685773446858798712}
+  sparkleSound: {fileID: 0}
 --- !u!82 &6138260847638288582
 AudioSource:
   m_ObjectHideFlags: 0
