@@ -5510,14 +5510,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &257708124
 Rigidbody2D:
   serializedVersion: 5
@@ -6014,14 +6017,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &262607502
 Rigidbody2D:
   serializedVersion: 5
@@ -16913,14 +16919,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &638655546
 Rigidbody2D:
   serializedVersion: 5
@@ -19765,14 +19774,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &682735420
 Rigidbody2D:
   serializedVersion: 5
@@ -41810,14 +41822,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &1480713988
 Rigidbody2D:
   serializedVersion: 5
@@ -46565,14 +46580,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &1618066286
 Rigidbody2D:
   serializedVersion: 5
@@ -48942,14 +48960,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &1670774898
 Rigidbody2D:
   serializedVersion: 5
@@ -49990,14 +50011,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!50 &1692551349
 Rigidbody2D:
   serializedVersion: 5
@@ -64257,14 +64281,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 0, g: 0, b: 0, a: 0}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
-  windSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!4 &4895664941016123203
 Transform:
   m_ObjectHideFlags: 0

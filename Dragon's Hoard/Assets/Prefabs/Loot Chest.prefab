@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2470005287592135349}
   - component: {fileID: 744489183525943600}
   - component: {fileID: 5779906220181152516}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6442657500444357118}
   - component: {fileID: 6015888310301291464}
   - component: {fileID: 291572817222220896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Loot Chest
   m_TagString: Chest
   m_Icon: {fileID: 0}
@@ -286,7 +286,6 @@ MonoBehaviour:
   levelNumber: 0
   levelSelectGate: {fileID: 0}
   countDownText: {fileID: 5779906220181152516}
-  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 1131173460250071030}
 --- !u!61 &6442657500444357118
 BoxCollider2D:
@@ -583,7 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8146837260901762791}
   - component: {fileID: 1131173460250071030}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Count Down Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}

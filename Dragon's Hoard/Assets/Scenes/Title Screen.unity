@@ -20412,13 +20412,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaea7681a1e624ab913e086e2a339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgressScriptableObject: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
+  _highlightColor: {r: 1, g: 1, b: 1, a: 1}
   audioClips:
   - {fileID: 8300000, guid: feb07079bac46ca4db9d8476aa37c918, type: 3}
   - {fileID: 8300000, guid: 76c07e9bad9db6245af674d448f8744d, type: 3}
   - {fileID: 8300000, guid: ec5fd6e0878a9794ba2150028bf1b876, type: 3}
   - {fileID: 8300000, guid: 5ddb4e27952fd3246b835a94531108af, type: 3}
-  grabSound: {fileID: 0}
-  releaseSound: {fileID: 0}
+  grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
+  moveSound: {fileID: 0}
+  moveVolumeDivision: 400
 --- !u!4 &4895664941016123203
 Transform:
   m_ObjectHideFlags: 0
@@ -20487,7 +20491,6 @@ MonoBehaviour:
   levelNumber: 0
   levelSelectGate: {fileID: 3557870405856095777}
   countDownText: {fileID: 0}
-  valuableTrackerText: {fileID: 0}
   chestCountdownAudio: {fileID: 1755467388}
 --- !u!4 &5632461826565580846
 Transform:

@@ -37,6 +37,8 @@ public class ProgressSaver : ScriptableObject
     public bool _level9FirstTime = true;
     public bool _level10FirstTime = true;
 
+    public bool isDragging = false;
+
     public void SaveGame()
     {
         PlayerPrefs.SetInt("cameraPosition", cameraPosition);

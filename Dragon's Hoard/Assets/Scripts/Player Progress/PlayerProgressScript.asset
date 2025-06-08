@@ -16,7 +16,7 @@ MonoBehaviour:
   levelProgress: 1
   masterVolume: 1
   SFXVolume: 1
-  musicVolume: 1
+  musicVolume: 0.4
   level_0: 0
   level_1_1: 0
   level_1_2: 0
@@ -35,3 +35,5 @@ MonoBehaviour:
   _level7FirstTime: 1
   _level8FirstTime: 1
   _level9FirstTime: 1
+  _level10FirstTime: 1
+  isDragging: 0

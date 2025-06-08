@@ -92,7 +92,9 @@ public class WinBox : MonoBehaviour
             
             countDownText.text = null;
             _isCounting = false;
-            chestCountdownAudio.Stop();
+
+            if (chestCountdownAudio != null)
+                chestCountdownAudio.Stop();
         }
     }
 

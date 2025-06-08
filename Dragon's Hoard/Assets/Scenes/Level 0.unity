@@ -8816,6 +8816,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Object_Loot_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5633822814484820946, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633822814484820946, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633822814484820946, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6138260847638288582, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
       propertyPath: m_Volume
       value: 0.0053798906
@@ -8828,6 +8840,46 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 88e8d45964eeaa54a9f12b259972fc99, type: 3}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: windVolume
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _highlightColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _highlightColor.b
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _highlightColor.g
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: _highlightColor.r
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246261679036109187, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
+      propertyPath: playerProgressScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 02aecf3857d77c14292dc7784811eacc, type: 2}
     - target: {fileID: 6354362826691324755, guid: 135febb3bf2919a4aa2d5ed7d8883b48, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.338346

@@ -5,6 +5,10 @@ using Random = UnityEngine.Random;
 
 public class Drag2DObject : MonoBehaviour
 {
+    public ProgressSaver playerProgressScriptableObject;
+    private SpriteRenderer _spriteRenderer;
+    private Color _startColor;
+    public Color _highlightColor;
     private TrailRenderer _line;
     private ParticleSystem _particles;
     private bool _isBeingDragged;
@@ -18,14 +22,20 @@ public class Drag2DObject : MonoBehaviour
     private CameraShake _cameraShakeScript;
     public AudioClip grabSound;
     public AudioClip releaseSound;
-    public AudioSource windSound;
-    public AudioSource sparkleSound;
+    public AudioSource moveSound;
+    public float moveVolumeDivision = 400;
 
     void Start()
     {
-        if (windSound != null)
+        if (GetComponent<SpriteRenderer>())
         {
-            windSound.volume = 0;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _startColor = _spriteRenderer.color;
+        }
+
+        if (moveSound != null)
+        {
+            moveSound.volume = 0;
         }
 
         Time.timeScale = 1;
@@ -61,11 +71,7 @@ public class Drag2DObject : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (sparkleSound != null)
-        {
-            sparkleSound.Play();
-        }
-
+        playerProgressScriptableObject.isDragging = true;
         _isBeingDragged = true;
 
         if (_impactSound != null)
@@ -73,7 +79,7 @@ public class Drag2DObject : MonoBehaviour
             _impactSound.volume = 0.2f;
             _impactSound.PlayOneShot(grabSound);
         }
-        
+
 
         if (_rigidBody != null)
         {
@@ -84,7 +90,7 @@ public class Drag2DObject : MonoBehaviour
         {
             _particles.Play();
         }
-           
+
         if (_line != null)
         {
             _line.enabled = true;
@@ -93,17 +99,19 @@ public class Drag2DObject : MonoBehaviour
 
     void OnMouseUp()
     {
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.color = _startColor;
+        }
+        
+        playerProgressScriptableObject.isDragging = false;
+
         _isBeingDragged = false;
         _impactSound.volume = 0.2f;
         _impactSound.PlayOneShot(releaseSound);
-        if (windSound != null)
+        if (moveSound != null)
         {
-            windSound.volume = 0;
-        }
-
-        if (sparkleSound != null)
-        {
-            sparkleSound.Stop();
+            moveSound.volume = 0;
         }
 
         if (_rigidBody != null)
@@ -115,8 +123,8 @@ public class Drag2DObject : MonoBehaviour
         {
             _particles.Stop();
         }
-           
-        
+
+
         if (_line != null)
         {
             _line.enabled = false;
@@ -125,7 +133,7 @@ public class Drag2DObject : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
         _targetOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         _forceVector = _targetOffset * forceMagnitude;
 
@@ -134,9 +142,9 @@ public class Drag2DObject : MonoBehaviour
             _rigidBody.linearVelocity = _rigidBody.linearVelocity * 0.9f;
             _rigidBody.AddForce(_forceVector, ForceMode2D.Force);
 
-            if (windSound != null)
+            if (moveSound != null)
             {
-                windSound.volume = _rigidBody.linearVelocity.magnitude / 400;
+                moveSound.volume = _rigidBody.linearVelocity.magnitude / moveVolumeDivision;
             }
         }
 
@@ -148,7 +156,7 @@ public class Drag2DObject : MonoBehaviour
         {
             _rigidBody.AddTorque(10 * Time.deltaTime);
         }
-            
+
     }
 
     void OnCollisionEnter2D(Collision2D _collision)
@@ -156,7 +164,7 @@ public class Drag2DObject : MonoBehaviour
         float noise = _collision.relativeVelocity.magnitude * 0.75f;
         Mathf.Round(noise);
 
-        if (_impactSound != null )
+        if (_impactSound != null)
         {
             _impactSound.volume = noise / 30;
             _impactSound.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
@@ -173,6 +181,23 @@ public class Drag2DObject : MonoBehaviour
         {
             _cameraShakeScript.magnitude = noise;
         }
+    }
+
+    void OnMouseOver()
+    {
+        if (playerProgressScriptableObject.isDragging == false && _spriteRenderer != null)
+        {
+            _spriteRenderer.color = _highlightColor;
+        }
+    }
+
+    void OnMouseExit()
+    {
+        if (_isBeingDragged == false && _spriteRenderer != null)
+        {
+            _spriteRenderer.color = _startColor;
+        }
+            
     }
 
 }

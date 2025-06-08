@@ -27,7 +27,7 @@ TagManager:
   - LevelBounds
   - Tunnel
   - Vertical Moving Platform
-  - 
+  - Don't Collide With Moving Platform
   - 
   - 
   - 
