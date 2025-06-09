@@ -9691,6 +9691,10 @@ PrefabInstance:
       propertyPath: loseNoise
       value: 
       objectReference: {fileID: 1024458765}
+    - target: {fileID: 5648074385738142369, guid: 9279c1acffb1d2c448fd89c8b94c1173, type: 3}
+      propertyPath: reductionFloat
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 7698796669713928498, guid: 9279c1acffb1d2c448fd89c8b94c1173, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03999999

@@ -81,4 +81,9 @@ public class ProgressSaver : ScriptableObject
             _level9FirstTime = PlayerPrefs.GetInt("_level10FirstTime") != 0;
         }
     }
+
+    public void DeleteSave()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

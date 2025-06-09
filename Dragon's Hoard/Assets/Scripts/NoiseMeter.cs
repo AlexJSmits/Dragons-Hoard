@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NoiseMeter : MonoBehaviour
 {
     public float maxNoise = 10;
-    public float reductionFloat = 0.01f;
+    private float reductionFloat = 0.03f;
     private bool _pause = false;
     public float currentNoise = 0;
     private Animator _animationManager;

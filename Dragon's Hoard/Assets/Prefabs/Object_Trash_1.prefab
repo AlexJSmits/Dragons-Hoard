@@ -5175,7 +5175,7 @@ MonoBehaviour:
   grabSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
   releaseSound: {fileID: 8300000, guid: 035fcaa400bedd64db9448abd15ea734, type: 3}
   moveSound: {fileID: 4685773446858798712}
-  moveVolumeDivision: 400
+  moveVolumeDivision: 300
 --- !u!82 &6138260847638288582
 AudioSource:
   m_ObjectHideFlags: 0
